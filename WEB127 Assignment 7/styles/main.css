@@ -1,0 +1,227 @@
+.flex_center_column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex_row{
+    display: flex;
+    flex-direction: row;
+}
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+/* ---------- HEADER AND NAV ---------- */
+header{
+    justify-content: space-between;
+    width: 80%;
+}
+nav {
+    font-size: 24px;
+}
+nav ul{
+    list-style:none;
+}
+nav ul li {
+    margin: 1rem;
+    padding: 5px;
+}
+nav ul li:hover {
+    background-color: rgb(245, 222, 127);
+}
+a{
+    text-decoration: underline;
+}
+a:visited{
+    color: black;
+}
+
+/* ---------- HOME  ---------- */
+
+.home_h3 {
+    font-size: 30px;
+}
+.home_sections{
+    width: 70%;
+    margin: 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.home_img_div:nth-child(odd){
+    flex-direction: row-reverse;
+}
+.home_img_div p{
+    width: 60%;
+}
+#home_aboutus {
+    background: linear-gradient(45deg, rgb(229, 193, 193), rgb(188, 218, 227));
+    padding: 20px 100px;
+    border-radius: 10px;
+}
+.home_hero {
+    background-image: url("../media/minimalistCoffeegreen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 500px;
+    width: 100%;
+}
+.home_hero a {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(192, 166, 15);
+    font-size: 20px;
+    border-radius: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+.home_hero a:hover{
+    background-color: rgb(220, 204, 112);
+}
+#home_h2 {
+    font-size: 50px;
+    margin: 50px auto;
+    font-weight: 400;
+}
+#home_textbox {
+    width: 50%;
+    margin: auto 100px 100px auto;
+}
+
+
+/* ---------- GRID + MAIN CONTAINER ---------- */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.grid p{
+    font-size: smaller;
+    font-style: italic;
+}
+.grid img{
+    transition: all .3s ease;
+}
+/* hover zoom effect reference */
+/*https://stackoverflow.com/questions/22492498/css-resize-zoom-in-effect-on-image-while-keeping-dimensions*/
+.imgwrapper{
+    display: inline-block;
+    overflow: hidden;
+}
+.grid img:hover{
+    filter: brightness(70%);
+    transform: scale(1.1);
+}
+main{
+    font-size: 28px;
+}
+
+/* ---------- MENU HERO SECTIONS  ---------- */
+
+.hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center ;
+    height: 500px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.hero h2{
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 24px;
+    font-size: 36px;
+}
+.hero p{
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.89);
+    padding: 20px;
+    font-size: 24px;
+}
+
+
+/* ---------- MEDIA QUERIES ---------- */
+@media screen and (max-width: 1200px) {
+    
+    .home_hero{
+        background-position: center;
+    }
+    .hero p{
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.89);
+        padding: 10px;
+        font-size: 20px;
+    }
+    .home_hero a {
+        width: 200px;
+        padding: 10px;
+        border: none;
+        background-color: rgb(192, 166, 15);
+        font-size: 20px;
+        border-radius: 30px;
+        margin-top: 0;
+    }
+    #home_h2 {
+        font-size: 40px;
+        margin: 30px;
+        font-weight: 400;
+    }
+    #home_textbox {
+        width: 70%;
+        margin: 0;
+    }
+    .home_img_div {
+        width: 95%;
+
+    }
+    .home_img_div img {
+        width: 400px;
+    }
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 800px) {
+    .hero p{
+        width: 80%;
+        background-color: rgba(255, 255, 255, 0.89);
+        padding: 10px;
+        font-size: 20px;
+    }
+    .hero h2{
+        font-size: 30px;
+        padding: 10px;
+    }
+    .hero{
+        height: 600px;
+    }
+    .home_img_div img {
+        width: 300px;
+    }
+    body{
+        min-width: 500px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 700px) {
+    body{
+        width: 100%;
+    }
+    .home_hero{
+        background:rgb(200, 236, 167)
+    }
+    #home_textbox p{
+        margin: 15px;
+    }
+    .hero{
+        height: 600px;
+    }
+    .home_img_div img {
+        width: 200px;
+    }
+}
